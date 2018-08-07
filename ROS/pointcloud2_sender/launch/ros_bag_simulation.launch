@@ -1,0 +1,14 @@
+<!--
+
+-->
+
+<launch>
+        <!-- REMOVE THIS IF YOU HAVE ANOTHER LAUNCH FILE THAT CALL ROSBRIDGE -->
+	<include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch">
+		<param name="port" value="9080"/>
+		
+	</include>
+
+    <node name="pointcloud2_sender" pkg="pointcloud2_sender" type="pointcloud2_sender.py" output="screen"/>
+	
+</launch>
